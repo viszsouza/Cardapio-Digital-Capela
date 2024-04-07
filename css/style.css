@@ -1,0 +1,377 @@
+@import url("base.css");
+
+body{
+    background-color: var(--branco);
+}
+
+header{
+    width: 100%;
+    height: 420px;
+    background-image: url("/img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 9999px;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    transition-duration: 200ms;
+}
+
+.inicio img:hover{
+    transform: scale(1.1);
+}
+
+.inicio h1{
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--branco);
+    text-shadow: black 0.1em 0.1em 0.2em;
+    text-align: center;
+}
+
+.inicio p{
+    color: var(--branco);
+    font-weight: 500;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    text-align: center;
+}
+
+#date-span{
+    color: var(--branco);
+    background-color: var(--verde);
+    padding: 4px 16px 4px 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-shadow: none;
+    box-shadow: var(--shadow);
+}
+
+#inicio-menu{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+
+.title{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding: 0px 8px 0px 8px;
+    margin: 8px 0px 8px 0px;
+}
+
+.title h2{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 10px;
+}
+
+.title h3{
+    width: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 0px;
+    padding: 0px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding: 0px 8px 0px 8px;
+    margin-bottom: 50px;
+}
+
+.produto{
+    display: flex;
+    gap: 8px;
+    background: var(--gradiente);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.produto img{
+    width: 112px;
+    height: 112px;
+    border-radius: 6px;
+    transition-duration: 300ms;
+}
+
+.produto img:hover{
+    transform: scale(1.1) rotate(-2deg);
+}
+
+.produtos-desc{
+    width: 100%;
+}
+
+.produtos-desc h1{
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.produtos-desc p{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.produtos-vb{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.produtos-vb button{
+    background-color: var(--preto);
+    padding: 0px 20px 0px 20px;
+    border-radius: 5px;
+}
+
+
+.produtos-vb button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.produtos-vb i{
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--branco);
+}
+
+.produtos-vb p{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding: 0px 8px 0px 8px;
+    margin-bottom: 20px;
+}
+
+.fundo{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--fundo);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.cart-container{
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 6px;
+    min-width: 90%;
+}
+
+.cart-container h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+.itens-cart{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    flex-direction: column;
+}
+
+.cart-container p{
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+#address{
+    width: 100%;
+	border-radius: 6px;
+    border-width: 2px;
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 4px;
+    border: 2px solid var(--cinza);
+}
+
+#address-warm{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    color: var(--vermelho);
+    visibility: hidden;
+}
+
+.botoes-modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.botoes-modal button{
+    border: none;
+}
+
+#close-modal-btn{
+    cursor: pointer;
+}
+
+.container-item-produto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: var(--cinza);
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+}
+
+.item-produto h1{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.item-produto p{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+.item-produto h3{
+    margin-left: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#checkout-btn{
+    background-color: var(--verde);
+    color: var(--branco);
+    padding: 4px 16px 4px 16px;
+    border-radius: 4px;
+    transition: 200ms;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+#checkout-btn:hover{
+    transform: scale(1.1);
+}
+
+.botao-remover button{
+    border: none;
+    cursor: pointer;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+}
+
+.botao-remover button:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 40;
+    width: 100%;
+    background-color: var(--vermelho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer button{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--branco);
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+footer span{
+    color: var(--branco);
+}
+
+footer i{
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--branco);
+}
+
+@media (min-width: 768px){
+    #inicio-menu{
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    main{
+        grid-template-columns: repeat(2, minmax(0, 2fr));
+    }
+
+    section{
+        grid-template-columns: repeat(2, minmax(0, 2fr));
+    }
+
+    .title{
+        padding: 0px 10% 0px 10%;
+    }
+
+    .title h2{
+        font-size: 30px;
+        line-height: 26px;
+    }
+
+    footer button{
+        padding: 20px;
+    }
+
+    .cart-container{
+        min-width: 600px;
+    }
+}
