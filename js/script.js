@@ -12,6 +12,8 @@ const removeItem = document.getElementById("remove-from-cart-btn")
 
 let cart = [];
 
+console.log(addressInput)
+
 updateCartModal()
 //Abrir modal
 cartBtn.addEventListener("click", function(){
@@ -182,7 +184,7 @@ checkoutBtn.addEventListener("click", function(){
     const isOpen = checkRestaurantOpen();
     if(!isOpen){
         Toastify({
-            text: "Ops o restaurante está fechado",
+            text: "Ops! o restaurante está fechado",
             duration: 3000,
             close: true,
             gravity: "top", // `top` or `bottom`
@@ -193,7 +195,7 @@ checkoutBtn.addEventListener("click", function(){
             },
         }
         ).showToast();
-        return;
+        //return;
     }
 
     if(cart.length === 0) return;
@@ -218,7 +220,7 @@ Preço: R$ ${item.price}
     const mensage = encodeURIComponent(cartItens)
     const phone = "8185742601"
 
-    window.open(`https://wa.me/${phone}?text=${mensage} Endereço: ${addressInput.value}`, "_blank")
+    window.open(`https://wa.me/${phone}?text=${mensage} Forma de pagamento: ${addressInput.value}`, "_blank")
 
     cart = [];
     updateCartModal();
