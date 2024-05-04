@@ -218,7 +218,7 @@ Preço: R$ ${item.price}
     }).join("")
 
     const mensage = encodeURIComponent(cartItens)
-    const phone = "8185742601"
+    const phone = "8188836598"
 
     window.open(`https://wa.me/${phone}?text=${mensage} Forma de pagamento: ${addressInput.value}`, "_blank")
 
